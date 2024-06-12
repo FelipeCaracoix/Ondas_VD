@@ -10,6 +10,9 @@
   import FormulaDeslizable from "./components/FormulaDeslizable.svelte";
   import Amplitud from "./texto/txtAmplitud.svelte"
   import TxtAmplitud from "./texto/txtAmplitud.svelte";
+  import txtFrecuencia from "./texto/txtFrecuencia.svelte";
+  import TxtFrecuencia from "./texto/txtFrecuencia.svelte";
+  import FourierDrawing from "./components/FourierDrawing.svelte"
   
 
   /* Variables para el scroller1 */
@@ -78,12 +81,12 @@
       <p>{offset2}</p>
       
     </div>
-    <div slot="foreground" class="foreground_container" >
+    <div slot="foreground" class="foreground_container">
       <section class="step_foreground">
       <TxtAmplitud/>
       </section>
       <section class="step_foreground">
-      <Loremipsum/>
+      <TxtFrecuencia/>
         
       </section>
       <section class="step_foreground">
@@ -91,14 +94,15 @@
       </section>
     </div>
   </Scroller>
-
+  <div  class="img-gif">
+    <img src="images\VidCW.gif" alt="CW"style="width:600px;">
+    </div>
+    <div class="lorem_ipsum">
+      <Loremipsum />
+    </div>
+    <FourierDrawing/>
 </main>
-<div  class="img-gif">
-<img src="images\GifCW.gif" alt="CW"style="width:600px;">
-</div>
-<div class="lorem_ipsum">
-  <Loremipsum />
-</div>
+
 
 <style>
 

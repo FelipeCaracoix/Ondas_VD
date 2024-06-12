@@ -3,7 +3,7 @@
 
     import { onMount } from 'svelte';
     
-
+    export let amplitud;
     function fourierSeries(x, L) { // L = longitud del intervalo donde se repite la funcion (periodo)
   const nMax = 10; // Número máximo de términos en la serie (puedes ajustarlo según tus necesidades)
   let result = 0;
@@ -34,7 +34,7 @@
     const datos = [];
   
     for (let x = 0; x <= 10; x += 0.1) {
-      const y = fourierSeries(x,2);
+      const y = fourierSeries(x,amplitud);
       datos.push([ x, y ]);
     }
   
