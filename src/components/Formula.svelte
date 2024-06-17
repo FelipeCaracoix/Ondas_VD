@@ -2,6 +2,7 @@
     import * as d3 from 'd3';
 
     import { onMount } from 'svelte';
+    import Loremipsum from '../texto/Loremipsum.svelte';
     
     export let amplitud;
     function fourierSeries(x, L) { // L = longitud del intervalo donde se repite la funcion (periodo)
@@ -61,6 +62,7 @@
 });
   </script>
   <div id="grafico" />
+  {L,Frecuencia}
 
 
   

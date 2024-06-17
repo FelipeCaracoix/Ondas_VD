@@ -1,19 +1,29 @@
 <script lang="ts">
     import * as d3 from 'd3';
     import { onMount } from 'svelte';
-  
-    let L = 1;
+    import App from '../App.svelte';
     let datos = []; // Almacena los datos del gráfico
     let svg; // Referencia al SVG
     let an = 0;
     let bn = 1;
-
     let sliderValue = 1;
 
-  
+
+
+    export let L =1;
+    export let Frecuencia =1;
+   
+
+    $:  if (L ||Frecuencia){
+    actualizarGrafico();
+    }
+
+
+
+
     // Función para calcular la serie de Fourier
     function fourierSeries(x, L, an, bn) {
-      return 4 * L * Math.sin(x * 1 * Math.PI)
+      return 4 * L * Math.sin(x * Frecuencia )
     }
   
     // Función para actualizar el gráfico cuando cambie L
@@ -54,9 +64,18 @@
         .datum(datos)
         .attr("d", linea)
         .style("stroke", "#338B31")
-        .style("stroke-width", 2)
+        .style("stroke-width", 4)
         .attr("filter", "none")
         .attr("fill", "none");
+
+        svg.append("line")
+    .attr("x1", escalaX(0))
+    .attr("y1", escalaY(0))
+    .attr("x2", escalaX(10))
+    .attr("y2", escalaY(0))
+    .style("stroke", "black")
+    .style("stroke-width", 3);
+
     }
   
     // Llama a la función cuando cambie el valor de L
@@ -66,13 +85,8 @@
     });
   </script>
   
-  <div id="grafico"  style= "width: 300px; height: 300px; margin-bottom:25px;"/>
+  <div id="grafico"  style= "width: 400px; height: 400px; display:flex;flex-direction:row"/>
 
-  <div style="display:flex;flex-direction:row">
-    <p>{Math.floor(L)}</p>
-    <input type="range" min="0" max="2" step="0.001" style=""bind:value={L} on:input={actualizarGrafico} />
- 
- </div>
  
   
   <style>
@@ -85,9 +99,7 @@
       justify-content: center;
     }
     
-    input[type="range"] {
-  accent-color: #338B31;}
-
+    
     svg {
       display:block;
     }

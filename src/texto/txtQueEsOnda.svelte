@@ -1,5 +1,5 @@
 <div style="font-size: larger;display: flex; flex-direction: column ;justify-content:start">
-    <h2>Amplitud</h2>
+    <h2>Que es una onda?</h2>
 
 <p style="font-size: larger;">La amplitud de una onda es una medida fundamental que describe la magnitud máxima de una oscilación en un punto particular de la onda. En términos más simples, es la distancia vertical desde el punto medio de la onda hasta la cresta (el punto más alto) o hasta el valle (el punto más bajo).
 

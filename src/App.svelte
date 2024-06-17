@@ -5,15 +5,14 @@
 
   import DebugScroller from "./components/DebugScroller.svelte"
   import Loremipsum from "./texto/Loremipsum.svelte"
-  import Formula from  "./components/Formula.svelte"
-  import Sinx from  "./components/sinx.svelte"
   import FormulaDeslizable from "./components/FormulaDeslizable.svelte";
-  import FormulaDeslizable1 from "./components/FormulaDeslizable1.svelte";
+  import { fade } from 'svelte/transition';
 
   import Amplitud from "./texto/txtAmplitud.svelte"
   import TxtAmplitud from "./texto/txtAmplitud.svelte";
   import txtFrecuencia from "./texto/txtFrecuencia.svelte";
   import TxtFrecuencia from "./texto/txtFrecuencia.svelte";
+  import TxtQueEsOnda from "./texto/txtQueEsOnda.svelte"
   import FourierDrawing from "./components/FourierDrawing.svelte"
   
 
@@ -25,6 +24,10 @@
   let top = 0.1
   let threshold = 0.5
   let bottom = 0.9
+
+  /*variables de los graficos*/
+  let L = 1;
+  let Frecuencia = 1;
 
 </script>
 
@@ -62,26 +65,51 @@
     bind:progress={progress}
   >
     <div slot="background" class="image_container">
-      {#if index == 0}  
-      <FormulaDeslizable />
-      {:else}
-      <FormulaDeslizable1/>
-      {/if}
+      
+      <FormulaDeslizable {L}{Frecuencia} {index}/>
 
-    </div>
+
+      <div style="width:-webkit-fill-available;display:flex;flex-direction:row; justify-content:space-evenly">
+
+        {#if index > 0}
+      <div style="display:flex;flex-direction:column; align-items:center; transition: margin 0.5s ease;">
+      <p style="margin-bottom:4px" in:fade={{ delay: 0, duration: 150 }} out:fade={{ delay: 0, duration: 150 }}>Amplitud</p>
+      <input type="range" min="0" max="2" step="0.001" style="" bind:value={L} />
+      </div>
+      {/if}
+      
+    {#if index == 2}
+    <div style="display:flex;flex-direction:column; align-items:center">
+      <p style="margin-bottom:4px" in:fade={{ delay: 0, duration: 150 }} out:fade={{ delay: 0, duration: 150 }}>Frecuencia</p>
+      
+      <input type="range" min="0" max="2" step="0.001" bind:value={Frecuencia} in:fade={{ delay: 0, duration: 200 }} out:fade={{ delay: 0, duration: 150 }} />
+       </div> 
+      {/if}
+  
+      </div>
+      </div>
+
+
+
+
     <div slot="foreground" class="foreground_container">
+      <section class="step_foreground" style="height:700px">
+        <TxtQueEsOnda/>
+        </section>
       <section class="step_foreground" style="height:700px">
       <TxtAmplitud/>
       </section>
-      <section class="step_foreground" style="height:700px">
+      <section class="step_foreground" style="height:600px">
       <TxtFrecuencia/>
         
       </section>
-      <section class="step_foreground" style="height:700px">
-        <Loremipsum/> 
-      </section>
+    
     </div>
   </Scroller>
+
+<hr style="padding-top:100px">
+
+
   <div  class="img-gif">
     <img src="images\VidCW.gif" alt="CW"style="width:600px;">
     </div>
@@ -129,17 +157,22 @@
   /* Estilos para el scroller */
   .foreground_container {
     padding-left: 50%;
+    scroll-snap-type: y mandatory;
+    width:500px
   }
 
   .step_foreground {
     display: flex;
     justify-content: start;
     height:auto;
-    
+    scroll-snap-align: start;
     color: black;
   
     
   }
+  input[type="range"] {
+  accent-color: #338B31;}
+
   .epi_foreground {
     padding: 20px;
     max-width: 150px;
@@ -156,8 +189,11 @@
     position: absolute;
     flex-direction: column;
     justify-content: start;
-    align-items: center;
+    margin-right: 500px;
     height: 100vh;
+    padding-left: 10%;
+    padding-top: 2%;
+    
   }
   
 </style>
