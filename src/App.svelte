@@ -97,10 +97,10 @@
         <TxtQueEsOnda/>
         </section>
       <section class="step_foreground" style="height:700px">
-      <TxtAmplitud/>
+      <TxtAmplitud {L}/>
       </section>
-      <section class="step_foreground" style="height:600px">
-      <TxtFrecuencia/>
+      <section class="step_foreground" style="height:900px">
+      <TxtFrecuencia {Frecuencia}/>
         
       </section>
     

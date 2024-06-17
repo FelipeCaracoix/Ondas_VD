@@ -1,8 +1,9 @@
 <div style="font-size: larger;display: flex; flex-direction: column ;justify-content:start">
-    <h2>Que es una onda?</h2>
+    <h2>Que es una función periódica?</h2>
 
-<p style="font-size: larger;">La amplitud de una onda es una medida fundamental que describe la magnitud máxima de una oscilación en un punto particular de la onda. En términos más simples, es la distancia vertical desde el punto medio de la onda hasta la cresta (el punto más alto) o hasta el valle (el punto más bajo).
+<p style="font-size: larger;">Las funciones periódicas son aquellas funciones matemáticas cuyos valores se repiten a intervalos regulares, conocidos como periodos.</p>
 
-    Para visualizarlo, imagina que estás mirando las olas del mar. La altura de la ola desde su punto más tranquilo hasta la cima es la amplitud. En el contexto de las ondas sonoras, la amplitud está relacionada con el volumen del sonido: una amplitud mayor significa un sonido más fuerte.</p>
-</div>
+   <p style="font-size: larger;"> Las funciones trigonométricas, como el seno y el coseno, son ejemplos clásicos de funciones periódicas. Estas funciones son esenciales para modelar y estudiar fenómenos que exhiben regularidad en el tiempo o en el espacio, como las ondas, los ciclos biológicos, los patrones climáticos y más.
+    
+    Entender las funciones periódicas es crucial en campos como la física, la ingeniería y la economía, ya que permiten predecir comportamientos y diseñar sistemas que operan con ciclos regulares.</div>
 
