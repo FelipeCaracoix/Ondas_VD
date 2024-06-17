@@ -82,7 +82,7 @@
     <div style="display:flex;flex-direction:column; align-items:center">
       <p style="margin-bottom:4px" in:fade={{ delay: 0, duration: 150 }} out:fade={{ delay: 0, duration: 150 }}>Frecuencia</p>
       
-      <input type="range" min="0" max="2" step="0.001" bind:value={Frecuencia} in:fade={{ delay: 0, duration: 200 }} out:fade={{ delay: 0, duration: 150 }} />
+      <input type="range" min="1" max="3" step="0.0001" bind:value={Frecuencia} in:fade={{ delay: 0, duration: 200 }} out:fade={{ delay: 0, duration: 150 }} />
        </div> 
       {/if}
   
