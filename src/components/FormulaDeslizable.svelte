@@ -7,23 +7,43 @@
     let an = 0;
     let bn = 1;
     let sliderValue = 1;
-
+    let i =0;
 
 
     export let L =1;
     export let Frecuencia =1;
-   
+    export let index = 0;
 
     $:  if (L ||Frecuencia){
     actualizarGrafico();
     }
+    $: if ( index === 0){
+      animar();
+    }
+
+
+    function animar(){
+  
+  setTimeout(() => { // Utiliza setTimeout para controlar el intervalo de tiempo entre cada incremento
+    i -= 0.01; // Aumenta i en el valor de step
+    actualizarGrafico();
+    
+    // Aquí puedes llamar a cualquier función que necesite el valor actualizado de i
+    // Por ejemplo: actualizarSVG(i);
+
+    if(index == 0){requestAnimationFrame(animar); }// Llama a animar() en el próximo frame para continuar la animación
+  }, 0.2);
+}
+    
+
+
 
 
 
 
     // Función para calcular la serie de Fourier
     function fourierSeries(x, L, an, bn) {
-      return 4 * L * Math.sin(x * Frecuencia )
+      return 4 * L * Math.sin((x-i) * Frecuencia )
     }
   
     // Función para actualizar el gráfico cuando cambie L
