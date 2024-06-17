@@ -8,6 +8,8 @@
   import Formula from  "./components/Formula.svelte"
   import Sinx from  "./components/sinx.svelte"
   import FormulaDeslizable from "./components/FormulaDeslizable.svelte";
+  import FormulaDeslizable1 from "./components/FormulaDeslizable1.svelte";
+
   import Amplitud from "./texto/txtAmplitud.svelte"
   import TxtAmplitud from "./texto/txtAmplitud.svelte";
   import txtFrecuencia from "./texto/txtFrecuencia.svelte";
@@ -24,23 +26,6 @@
   let threshold = 0.5
   let bottom = 0.9
 
-  /* Variables para el scroller 2 */
-  let count2
-  let index2
-  let offset2
-  let progress2
-  let top2 = 0.1
-  let threshold2 = 0.5
-  let bottom2 = 0.9
-
-  /* Charts */
-  let charts = {
-    0: "lines_01.png",
-    1: "lines_02.png",
-    2: "lines_03.png",
-  }
-
- 
 </script>
 
 <main >
@@ -68,29 +53,32 @@
   
   <!-- Segundo scroller -->
   <Scroller
-    top={top2}
-    threshold={threshold2}
-    bottom={bottom2}
-    bind:count={count2}
-    bind:index={index2}
-    bind:offset={offset2}
-    bind:progress={progress2}
+    top={top}
+    threshold={threshold}
+    bottom={bottom}
+    bind:count={count}
+    bind:index={index}
+    bind:offset={offset}
+    bind:progress={progress}
   >
     <div slot="background" class="image_container">
+      {#if index == 0}  
       <FormulaDeslizable />
-      <p>{offset2}</p>
-      
+      {:else}
+      <FormulaDeslizable1/>
+      {/if}
+
     </div>
     <div slot="foreground" class="foreground_container">
-      <section class="step_foreground">
+      <section class="step_foreground" style="height:700px">
       <TxtAmplitud/>
       </section>
-      <section class="step_foreground">
+      <section class="step_foreground" style="height:700px">
       <TxtFrecuencia/>
         
       </section>
-      <section class="step_foreground">
-        <Loremipsum/>
+      <section class="step_foreground" style="height:700px">
+        <Loremipsum/> 
       </section>
     </div>
   </Scroller>
@@ -140,19 +128,17 @@
 
   /* Estilos para el scroller */
   .foreground_container {
-    pointer-events: none;
     padding-left: 50%;
   }
 
   .step_foreground {
     display: flex;
-    justify-content: end;
-    align-items: center;
+    justify-content: start;
     height:auto;
     
     color: black;
-    padding: 0.5em,0.5em;
-    margin: 0 0 2em 0;
+  
+    
   }
   .epi_foreground {
     padding: 20px;
@@ -169,12 +155,9 @@
     display: flex;
     position: absolute;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     height: 100vh;
-  }
-  .charts {
-    width : 300px;
   }
   
 </style>

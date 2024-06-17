@@ -1,19 +1,25 @@
 <script lang="ts">
     import * as d3 from 'd3';
     import { onMount } from 'svelte';
-  
-    let L = 1;
+    import App from '../App.svelte';
     let datos = []; // Almacena los datos del gráfico
     let svg; // Referencia al SVG
     let an = 0;
     let bn = 1;
-
+     let Frecuencia = 1;
+     let L = 1;
     let sliderValue = 1;
-
+     /*$: {
+    // Esto se ejecutará cada vez que L o frecuencia cambien
+    $L; // Accede al valor de L para hacerlo reactivo
+    $Frecuencia; // Accede al valor de frecuencia para hacerlo reactivo
+    actualizarGrafico();
+  }
+*/
   
     // Función para calcular la serie de Fourier
     function fourierSeries(x, L, an, bn) {
-      return 4 * L * Math.sin(x * 1 * Math.PI)
+      return 4 * L * Math.sin(x * Frecuencia * Math.PI)
     }
   
     // Función para actualizar el gráfico cuando cambie L
@@ -66,13 +72,20 @@
     });
   </script>
   
-  <div id="grafico"  style= "width: 300px; height: 300px; margin-bottom:25px;"/>
+  <div id="grafico"  style= "width: 300px; height: 300px; margin-bottom:25px;display:flex;flex-direction:row"/>
+  <div style="display:flex;flex-direction:column" >
+<div style="display:flex;flex-direction:row">
+   <p>{Math.floor(L)}</p>
+   <input type="range" min="0" max="2" step="0.001" style=""bind:value={L} on:input={actualizarGrafico} />
 
-  <div style="display:flex;flex-direction:row">
-    <p>{Math.floor(L)}</p>
-    <input type="range" min="0" max="2" step="0.001" style=""bind:value={L} on:input={actualizarGrafico} />
+</div>
+<div style="display:flex;flex-direction:row">
+  <p>{Math.floor(Frecuencia)}</p>
+  <input type="range" min="0" max="2" step="0.001" style=""bind:value={Frecuencia} on:input={actualizarGrafico} />
+
+</div>
+  </div>
  
- </div>
  
   
   <style>
