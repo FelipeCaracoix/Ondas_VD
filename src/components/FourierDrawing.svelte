@@ -158,6 +158,21 @@
   </script>
   
   <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .canvas-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background-color: white;
+      z-index: 10;
+      padding: 10px;
+    }
     canvas {
       border: 1px solid black;
       margin: 10px;
@@ -165,15 +180,68 @@
     button {
       margin: 10px;
     }
+    .explanation-container {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      max-width: 900px;
+    }
+    .explanation {
+      flex: 1;
+      margin: 10px;
+    }
+    h2 {
+      text-align: center;
+    }
   </style>
   
-  <canvas
-    bind:this={drawingCanvas}
-    width="400"
-    height="400"
-    on:mousedown={handleMouseDown}
-    on:mouseup={handleMouseUp}
-  ></canvas>
-  <canvas bind:this={fourierCanvas} width="400" height="400"></canvas>
-  <button on:click={clearCanvas}>Clear</button>
+  <div class="container">
+    <h2>Visualización de Series de Fourier</h2>
+    <div class="canvas-container">
+      <canvas
+        bind:this={drawingCanvas}
+        width="400"
+        height="400"
+        on:mousedown={handleMouseDown}
+        on:mouseup={handleMouseUp}
+      ></canvas>
+      <canvas bind:this={fourierCanvas} width="400" height="400"></canvas>
+    </div>
+    <button on:click={clearCanvas}>Limpiar</button>
+    <div class="explanation-container">
+      <div class="explanation">
+        <h2>Cómo Funciona Esto</h2>
+        <p>
+          Esta demostración visualiza cómo un dibujo se puede transformar en una serie de componentes de Fourier.
+          El proceso comienza cuando dibujas una forma en el lienzo de la izquierda. La forma que dibujas es
+          esencialmente una colección de puntos que definen el contorno de tu dibujo.
+        </p>
+        <p>
+          Una vez que completas tu dibujo y sueltas el botón del ratón, el programa captura la serie de puntos
+          y aplica la Transformada Discreta de Fourier (DFT) a estos puntos. La DFT convierte la información espacial
+          (tu dibujo) en información de frecuencia, descomponiéndolo en una serie de componentes sinusoidales (ondas).
+        </p>
+      </div>
+      <div class="explanation">
+        <h2>¿Por Qué Funciona?</h2>
+        <p>
+          Cada uno de estos componentes sinusoidales tiene una frecuencia, amplitud y fase específicas. Sumando estos componentes,
+          podemos reconstruir el dibujo original como una combinación de estas formas de onda simples. Esto es lo que se visualiza
+          en el lienzo de la derecha. Los círculos representan las amplitudes de estos componentes sinusoidales, y su movimiento
+          traza la forma de tu dibujo original.
+        </p>
+        <p>
+          La Transformada de Fourier es una herramienta poderosa en el procesamiento de señales y ayuda a analizar el contenido
+          de frecuencia de las señales. Aquí, nos permite ver cómo las formas complejas se pueden representar como sumas de
+          movimientos circulares más simples. Este concepto es fundamental en muchos campos, incluyendo el procesamiento de audio,
+          la compresión de imágenes e incluso la física cuántica.
+        </p>
+        <p>
+            "En este ejemplo, usamos hasta 100.000 componentes (círculos) para representar tu dibujo. Aunque pueda parecer demasiado, esta cantidad es crucial para lograr una similitud notable con la imagen original. La razón por la cual tantos círculos no afectan significativamente el rendimiento del programa radica en la simplicidad matemática subyacente. Cada círculo se puede describir mediante ecuaciones simples y operaciones geométricas, lo cual es computacionalmente eficiente. Esto significa que, aunque estamos utilizando una gran cantidad de componentes, la capacidad de los computadores para manejar estas operaciones de manera rápida y precisa permite mantener una experiencia fluida para el usuario."
+
+            Esta versión explica cómo la simplicidad de las operaciones matemáticas involucradas (como describir un círculo mediante ecuaciones geométricas básicas) permite que el programa maneje eficientemente hasta 100.000 componentes sin sacrificar la velocidad o complejidad del proceso computacional.
+        </p>
+      </div>
+    </div>
+  </div>
   
