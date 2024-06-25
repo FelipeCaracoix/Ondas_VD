@@ -89,9 +89,6 @@
       </div>
       </div>
 
-
-
-
     <div slot="foreground" class="foreground_container">
       <section class="step_foreground" style="height:700px">
         <TxtQueEsOnda/>
@@ -107,7 +104,18 @@
     </div>
   </Scroller>
 
+  
+
+  <div class="onda">
+    <iframe src="https://www.geogebra.org/calculator/ns3kjjf7?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+  </div>
+
+  
+
+
 <hr style="padding-top:100px">
+
+
 
 
   <div  class="img-gif">
@@ -195,5 +203,23 @@
     padding-top: 2%;
     
   }
+
+  .onda {
+      position: relative;
+      width: 800px;  /* Ajusta según tus necesidades */
+      height: 600px; /* Ajusta según tus necesidades */
+      overflow: hidden;
+  }
+
+  .onda iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 800px; /* Ajusta según tus necesidades */
+      height: 100%;
+      border: none;
+      clip-path: inset(0 0 0 75px); /* Ajusta los valores para recortar el lado izquierdo */
+  }
+
   
 </style>
