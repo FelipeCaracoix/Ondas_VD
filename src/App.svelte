@@ -104,12 +104,43 @@
     </div>
   </Scroller>
 
+  <div  class="img-gif">
+    <img src="images\VidCW.gif" alt="CW"style="width:600px;">
+  </div>
+  
+  <div class="lorem_ipsum">
+      <Loremipsum />
+  </div>
+
+  <div class="sumaOndaContainer">
+    <h2>Suma de Ondas</h2>
+    <br><br>
+    <div class = "sumaOndaLineal">
+      <img src="/public/images/gifSumaOnda.gif" alt="miGif">
+      <br>
+      <p style="font-size: larger;">En el contexto de las ondas sonoras, la amplitud está relacionada con el volumen del sonido: una amplitud mayor significa un sonido más fuerte.</p>
+    </div>
+
+    <br>
+
+    <div class="sumaOndaCircular">
+      <div class="onda">
+        <iframe title="ondaGeo" src="https://www.geogebra.org/calculator/wpgvpuns" width="600" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+      </div>
+      <br>
+      <p style="font-size: larger;">En el contexto de las ondas sonoras, la amplitud está relacionada con el volumen del sonido: una amplitud mayor significa un sonido más fuerte.</p>
+    
+      
+
+    </div>
+
+
+    
+
+  </div>
   
 
-  <div class="onda">
-    <iframe src="https://www.geogebra.org/calculator/ns3kjjf7?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
-  </div>
-  <img src="/public/images/gifSumaOnda.gif" alt="miGif">
+  
   
 
 
@@ -118,12 +149,7 @@
 
 
 
-  <div  class="img-gif">
-    <img src="images\VidCW.gif" alt="CW"style="width:600px;">
-    </div>
-    <div class="lorem_ipsum">
-      <Loremipsum />
-    </div>
+  
     <FourierDrawing/>
 </main>
 
@@ -220,6 +246,33 @@
       border: none;
       clip-path: inset(0 0 0 75px); /* Ajusta los valores para recortar el lado izquierdo */
   }
+
+  .sumaOndaContainer p {
+    width: 400px;
+    font-size: larger;
+    padding-left: 50px;
+  }
+
+  .sumaOndaLineal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .sumaOndaCircular{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .sumaOndaCircular iframe{
+    /* move left */
+    transform: translateX(-50px);
+  }
+
+
 
   
 </style>
