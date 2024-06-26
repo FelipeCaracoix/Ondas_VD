@@ -107,7 +107,7 @@
   <div  class="img-gif">
     <img src="images\VidCW.gif" alt="CW"style="width:600px;">
   </div>
-  
+
   <div class="lorem_ipsum">
       <Loremipsum />
   </div>
@@ -118,7 +118,7 @@
     <div class = "sumaOndaLineal">
       <img src="/public/images/gifSumaOnda.gif" alt="miGif">
       <br>
-      <p style="font-size: larger;">En el contexto de las ondas sonoras, la amplitud está relacionada con el volumen del sonido: una amplitud mayor significa un sonido más fuerte.</p>
+      <p style="font-size: larger;">Aqui podemos observar una suma de ondas lineales. La onda del medio (gris) es una onda estacionaria, que oscila en su lugar sin trasladarse. La segunda es una onda viajera que se desplaza a través del espacio. La onda verde resulta de la suma de las dos primeras, mostrando el fenómeno de superposición de ondas. Esta superposición puede causar interferencia constructiva o destructiva, dependiendo de la fase y amplitud de las ondas, ilustrando cómo se combinan para formar un patrón de interferencia.</p>
     </div>
 
     <br>
@@ -128,7 +128,7 @@
         <iframe title="ondaGeo" src="https://www.geogebra.org/calculator/wpgvpuns" width="600" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
       </div>
       <br>
-      <p style="font-size: larger;">En el contexto de las ondas sonoras, la amplitud está relacionada con el volumen del sonido: una amplitud mayor significa un sonido más fuerte.</p>
+      <p style="font-size: larger;">Como vimos posteriormente, las ondas al poder representarse tanto como ondas como circulos, podemos jugar con las amplitudes y frecuencias de estas para poder generar distintos movimientos especificos.</p>
     
       
 
@@ -248,7 +248,7 @@
   }
 
   .sumaOndaContainer p {
-    width: 400px;
+    width: 500px;
     font-size: larger;
     padding-left: 50px;
   }
