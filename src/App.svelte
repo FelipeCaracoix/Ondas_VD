@@ -109,26 +109,29 @@
   </div>
 
   <div class="lorem_ipsum">
-      <Loremipsum />
+      <!-- <Loremipsum /> -->
   </div>
 
   <div class="sumaOndaContainer">
-    <h2>Suma de Ondas</h2>
+    <h1>Suma de Ondas</h1>
     <br><br>
     <div class = "sumaOndaLineal">
-      <img src="/public/images/gifSumaOnda.gif" alt="miGif">
-      <br>
-      <p style="font-size: larger;">Aqui podemos observar una suma de ondas lineales. La onda del medio (gris) es una onda estacionaria, que oscila en su lugar sin trasladarse. La segunda es una onda viajera que se desplaza a través del espacio. La onda verde resulta de la suma de las dos primeras, mostrando el fenómeno de superposición de ondas. Esta superposición puede causar interferencia constructiva o destructiva, dependiendo de la fase y amplitud de las ondas, ilustrando cómo se combinan para formar un patrón de interferencia.</p>
+      <img id="gifSuma" src="/public/images/gifSumaOnda.gif"  alt="miGif">
+      <div style="margin: 20px; background:blue;"> </div>
+      <p>Aqui podemos observar una suma de ondas lineales. La onda del medio (gris) es una onda estacionaria, que oscila en su lugar sin trasladarse. La segunda es una onda viajera que se desplaza a través del espacio. La onda verde resulta de la suma de las dos primeras, mostrando el fenómeno de superposición de ondas. Esta superposición puede causar interferencia constructiva o destructiva, dependiendo de la fase y amplitud de las ondas, ilustrando cómo se combinan para formar un patrón de interferencia.</p>
     </div>
 
     <br>
 
     <div class="sumaOndaCircular">
       <div class="onda">
-        <iframe title="ondaGeo" src="https://www.geogebra.org/calculator/wpgvpuns" width="600" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+        <!-- <iframe title="ondaGeo" src="https://www.geogebra.org/calculator/wpgvpuns" width="400" height="400"  style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe> -->
+        <!-- <iframe title="ondaGeo" src="https://www.geogebra.org/calculator/wpgvpuns" width="400" height="400"  style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe> -->
+        <!-- <iframe title="ondaGeo" src="https://www.geogebra.org/calculator/wpgvpuns" width="400" height="400"  style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe> -->
+        <iframe title="ondaGeo" src="https://www.geogebra.org/calculator/wpgvpuns?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
       </div>
       <br>
-      <p style="font-size: larger;">Como vimos posteriormente, las ondas al poder representarse tanto como ondas como circulos, podemos jugar con las amplitudes y frecuencias de estas para poder generar distintos movimientos especificos.</p>
+      <p >Como vimos posteriormente, las ondas al poder representarse tanto como ondas como circulos, podemos jugar con las amplitudes y frecuencias de estas para poder generar distintos movimientos especificos.</p>
     
       
 
@@ -139,13 +142,6 @@
 
   </div>
   
-
-  
-  
-
-
-<hr style="padding-top:100px">
-
 
 
 
@@ -232,8 +228,8 @@
 
   .onda {
       position: relative;
-      width: 800px;  /* Ajusta según tus necesidades */
-      height: 600px; /* Ajusta según tus necesidades */
+      width: 600px;  /* Ajusta según tus necesidades */
+      height: 400px; /* Ajusta según tus necesidades */
       overflow: hidden;
   }
 
@@ -245,26 +241,42 @@
       height: 100%;
       border: none;
       clip-path: inset(0 0 0 75px); /* Ajusta los valores para recortar el lado izquierdo */
+      /* desabilitar poder hacer zoom */
+
+      
+  }
+
+  #gifSuma{
+    border-radius: solid 10px black;
+    border: black;
+    margin-left: 50px;
+    width:450px;
+    height: 450px;
   }
 
   .sumaOndaContainer p {
     width: 500px;
-    font-size: larger;
+
     padding-left: 50px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: normal;
+    text-align: left;
   }
 
   .sumaOndaLineal {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    margin-right: 70px;
   }
 
   .sumaOndaCircular{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
   }
   .sumaOndaCircular iframe{
