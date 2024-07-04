@@ -167,10 +167,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      position: sticky;
-      top: 0;
       background-color: white;
-      z-index: 10;
       padding: 10px;
     }
     canvas {
@@ -189,6 +186,10 @@
     .explanation {
       flex: 1;
       margin: 10px;
+    }
+
+    .aclaracion{
+      width: 900px;
     }
     h2 {
       text-align: center;
@@ -217,9 +218,10 @@
           esencialmente una colección de puntos que definen el contorno de tu dibujo.
         </p>
         <p>
-          Una vez que completas tu dibujo y sueltas el botón del ratón, el programa captura la serie de puntos
-          y aplica la Transformada Discreta de Fourier (DFT) a estos puntos. La DFT convierte la información espacial
-          (tu dibujo) en información de frecuencia, descomponiéndolo en una serie de componentes sinusoidales (ondas).
+          Esta demostración visualiza cómo un dibujo se puede transformar en una serie de componentes de Fourier. 
+          El proceso comienza cuando dibujas una forma en el lienzo de la izquierda. La forma que dibujas es esencialmente una colección de puntos que definen el contorno de tu dibujo.
+          Una vez que completas tu dibujo y sueltas el botón del ratón, el programa captura la serie de puntos y aplica la Transformada Discreta de Fourier (DFT) a estos puntos. 
+          La DFT convierte la información espacial (tu dibujo) en información de frecuencia, descomponiéndolo en una serie de componentes sinusoidales (ondas). 
         </p>
       </div>
       <div class="explanation">
@@ -236,12 +238,12 @@
           movimientos circulares más simples. Este concepto es fundamental en muchos campos, incluyendo el procesamiento de audio,
           la compresión de imágenes e incluso la física cuántica.
         </p>
-        <p>
-            "En este ejemplo, usamos hasta 100.000 componentes (círculos) para representar tu dibujo. Aunque pueda parecer demasiado, esta cantidad es crucial para lograr una similitud notable con la imagen original. La razón por la cual tantos círculos no afectan significativamente el rendimiento del programa radica en la simplicidad matemática subyacente. Cada círculo se puede describir mediante ecuaciones simples y operaciones geométricas, lo cual es computacionalmente eficiente. Esto significa que, aunque estamos utilizando una gran cantidad de componentes, la capacidad de los computadores para manejar estas operaciones de manera rápida y precisa permite mantener una experiencia fluida para el usuario."
-
-            Esta versión explica cómo la simplicidad de las operaciones matemáticas involucradas (como describir un círculo mediante ecuaciones geométricas básicas) permite que el programa maneje eficientemente hasta 100.000 componentes sin sacrificar la velocidad o complejidad del proceso computacional.
-        </p>
+       
       </div>
     </div>
+    <div class="aclaracion">
+      <p>
+        "En este ejemplo, usamos hasta 100.000 componentes (círculos) para representar tu dibujo. Aunque pueda parecer demasiado, esta cantidad es crucial para lograr una similitud notable con la imagen original. La razón por la cual tantos círculos no afectan significativamente el rendimiento del programa radica en la simplicidad matemática subyacente. Cada círculo se puede describir mediante ecuaciones simples y operaciones geométricas, lo cual es computacionalmente eficiente. Esto significa que, aunque estamos sumando un gran número de componentes, cada uno de ellos requiere un cálculo sencillo, permitiendo que el programa funcione sin problemas y sin consumir excesivos recursos de la computadora."
+    </p>
+    </div>
   </div>
-  
