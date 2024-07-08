@@ -36,15 +36,12 @@
 <main >
   <div style="width:max-content; height:max-content; background-color:#f9f9f9;position:absolute"></div>
   <div class="header">
-    <img src="/images/fourier.png" width="100" alt="anillos" />
-    <h3 class="headline">
-      <b>Titulo</b>
-      Ondas, Fourier y otras cosas
-    </h3>
+    <img src="/images/titulo.svg" width="800" alt="anillos" />
+    <h1 class="headline">
+      <b>Ondas, Fourier y otras cosas</b>
+      
+    </h1>
     <p class="bajada">Entendiendo como funcionan las ondas</p>
-    <div class="lorem_ipsum">
-      <p>text</p>
-    </div>
   </div>
 
   {#if progress < 1}
