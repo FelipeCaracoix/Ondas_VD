@@ -1,5 +1,5 @@
 <div style="font-size: larger;display: flex; flex-direction: column ;justify-content:start">
-    <h2>Que es una función periódica?</h2>
+    <h2>¿Qué es una función periódica?</h2>
 
 <p style="font-size: larger;">Las funciones periódicas son aquellas funciones matemáticas cuyos valores se repiten a intervalos regulares, conocidos como periodos.</p>
 

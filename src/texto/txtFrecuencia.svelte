@@ -9,7 +9,7 @@
 <p  style="font-size: larger" >Al ajustar la frecuencia con el control deslizante, estás modificando la rapidez con la que la <b style="color:green">onda</b> se repite a lo largo del tiempo. 
 </p>
 
-<p style="font-size: larger">La frecuencia de la función es de {Frecuencia}.</p>
+<p style="font-size: larger">La frecuencia de la función es de <b style="color:green">{Frecuencia}</b>.</p>
 
 <p style="font-size: larger">Un valor más alto en el rango significa más ciclos por segundo y una onda más “apretada”, mientras que un valor más bajo indica menos ciclos y una onda más “extendida”.</div>
 

@@ -14,6 +14,8 @@
   import TxtFrecuencia from "./texto/txtFrecuencia.svelte";
   import TxtQueEsOnda from "./texto/txtQueEsOnda.svelte"
   import FourierDrawing from "./components/FourierDrawing.svelte"
+  import txtSumaOndas from "./texto/txtSumaOndas.svelte"
+    import TxtSumaOndas from "./texto/txtSumaOndas.svelte";
   
 
   /* Variables para el scroller1 */
@@ -108,18 +110,26 @@
     <img src="images\VidCW.gif" alt="CW"style="width:600px;">
   </div>
 
-  <div class="lorem_ipsum">
-      <!-- <Loremipsum /> -->
-  </div>
 
+  <br>
   <div class="sumaOndaContainer">
-    <h1>Suma de Ondas</h1>
-    <br><br>
-    <div class = "sumaOndaLineal">
-      <img id="gifSuma" src="/public/images/gifSumaOnda.gif"  alt="miGif">
-      <div style="margin: 20px; background:blue;"> </div>
-      <p>Aqui podemos observar una suma de ondas lineales. La onda del medio (gris) es una onda estacionaria, que oscila en su lugar sin trasladarse. La segunda es una onda viajera que se desplaza a través del espacio. La onda verde resulta de la suma de las dos primeras, mostrando el fenómeno de superposición de ondas. Esta superposición puede causar interferencia constructiva o destructiva, dependiendo de la fase y amplitud de las ondas, ilustrando cómo se combinan para formar un patrón de interferencia.</p>
-    </div>
+    <Scroller
+    top={top}
+    threshold={threshold}
+    bottom={bottom}
+    bind:count={count}
+    bind:index={index}
+    bind:offset={offset}
+    bind:progress={progress}>
+      <div slot="background" class="image_container">
+      <img  src="/public/images/gifSumaOnda.gif"  alt="miGif" style="border:1px solid black; width:400px; height: 400px">
+      </div>
+      <div slot="foreground" class="foreground_container">
+        <div class="step_foreground"> 
+       <TxtSumaOndas/>
+        </div>
+      </div>
+    </Scroller>
 
     <br>
 
@@ -128,10 +138,10 @@
         <!-- <iframe title="ondaGeo" src="https://www.geogebra.org/calculator/wpgvpuns" width="400" height="400"  style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe> -->
         <!-- <iframe title="ondaGeo" src="https://www.geogebra.org/calculator/wpgvpuns" width="400" height="400"  style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe> -->
         <!-- <iframe title="ondaGeo" src="https://www.geogebra.org/calculator/wpgvpuns" width="400" height="400"  style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe> -->
-        <iframe title="ondaGeo" src="https://www.geogebra.org/calculator/wpgvpuns?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+        <iframe title="onda"src="https://www.geogebra.org/calculator/wpgvpuns?embed" frameborder="0" draggable="false"></iframe>
       </div>
       <br>
-      <p >Como vimos posteriormente, las ondas al poder representarse tanto como ondas como circulos, podemos jugar con las amplitudes y frecuencias de estas para poder generar distintos movimientos especificos.</p>
+      <p style="">Como vimos posteriormente, las ondas al poder representarse tanto como ondas como circulos, podemos jugar con las amplitudes y frecuencias de estas para poder generar distintos movimientos especificos.</p>
     
       
 
@@ -152,6 +162,7 @@
 
 <style>
 
+   
   .img-gif{
     display: flex;
     justify-content: center;
@@ -228,9 +239,10 @@
 
   .onda {
       position: relative;
-      width: 600px;  /* Ajusta según tus necesidades */
+      width: 400px;  /* Ajusta según tus necesidades */
       height: 400px; /* Ajusta según tus necesidades */
       overflow: hidden;
+      border: 1px solid black;  
   }
 
   .onda iframe {
