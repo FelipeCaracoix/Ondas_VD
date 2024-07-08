@@ -167,7 +167,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: white;
       padding: 10px;
     }
     canvas {

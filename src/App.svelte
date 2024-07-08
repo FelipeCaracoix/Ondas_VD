@@ -142,46 +142,38 @@
 
 
   <br>
-  <div class="sumaOndaContainer">
-    <Scroller
-    top={top}
-    threshold={threshold}
-    bottom={bottom}
-    bind:count={count}
-    bind:index={index}
-    bind:offset={offset}
-    bind:progress={progress}>
-      <div slot="background" class="image_container">
+  
+      <div  class="image_container" style="margin-top: 0px;">
       <img  src="/public/images/gifSumaOnda.gif"  alt="miGif" style="border:1px solid black; width:400px; height: 400px">
       </div>
-      <div slot="foreground" class="foreground_container">
+      <div  class="foreground_container">
         <div class="step_foreground"> 
        <TxtSumaOndas/>
         </div>
       </div>
-    </Scroller>
-
+  
     <br>
 
-    <div class="sumaOndaCircular">
-      <div class="onda">
+    <div style="display: flex;flex-direction:row">
+      <div class="image-container" style="clip-path: inset(0 0 0 75px)">
         <!-- <iframe title="ondaGeo" src="https://www.geogebra.org/calculator/wpgvpuns" width="400" height="400"  style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe> -->
         <!-- <iframe title="ondaGeo" src="https://www.geogebra.org/calculator/wpgvpuns" width="400" height="400"  style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe> -->
         <!-- <iframe title="ondaGeo" src="https://www.geogebra.org/calculator/wpgvpuns" width="400" height="400"  style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe> -->
-        <iframe title="onda"src="https://www.geogebra.org/calculator/wpgvpuns?embed" frameborder="0" draggable="false"></iframe>
+        <iframe title="onda"src="https://www.geogebra.org/calculator/wpgvpuns?embed" frameborder="0" width="475px" height="400px" draggable="false"></iframe>
       </div>
-      <br>
-      <p style="">Como vimos posteriormente, las ondas al poder representarse tanto como ondas como circulos, podemos jugar con las amplitudes y frecuencias de estas para poder generar distintos movimientos especificos.</p>
-    
       
 
+      <div class="foreground_container" style="position: absolute;">
+      <div class="step_foreground" style="font-size:larger;">
+      <p style="font-size: larger;">Como vimos posteriormente, las ondas al poder representarse tanto como ondas como circulos, podemos jugar con las amplitudes y frecuencias de estas para poder generar distintos movimientos especificos.</p>
+    
+      </div>
+      </div>
+   
     </div>
-
 
     
 
-  </div>
-  
 
 
 
@@ -249,12 +241,7 @@
     max-width: 150px;
     background-color: rgba(0, 0, 0, 0.5);
   }
-  .lorem_ipsum {
-    color: black;
-    margin: 100px auto;
-    max-width:500px;
-    height: auto;
-  }
+  
   .image_container {
     display: flex;
     position: absolute;
