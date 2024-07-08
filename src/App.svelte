@@ -136,10 +136,7 @@
     </div>
   </Scroller>
 
-  <div  class="img-gif">
-    <img src="images\VidCW.gif" alt="CW"style="width:600px;">
-  </div>
-
+ 
 
   <br>
   
@@ -161,20 +158,20 @@
         <!-- <iframe title="ondaGeo" src="https://www.geogebra.org/calculator/wpgvpuns" width="400" height="400"  style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe> -->
         <iframe title="onda"src="https://www.geogebra.org/calculator/wpgvpuns?embed" frameborder="0" width="475px" height="400px" draggable="false"></iframe>
       </div>
-      
-
       <div class="foreground_container" style="position: absolute;">
       <div class="step_foreground" style="font-size:larger;">
       <p style="font-size: larger;">Como vimos posteriormente, las ondas al poder representarse tanto como ondas como circulos, podemos jugar con las amplitudes y frecuencias de estas para poder generar distintos movimientos especificos.</p>
-    
       </div>
       </div>
    
     </div>
 
-    
+    <div style="font-size:larger; display:flex;flex-direction:column;text-align:center"><h2>Ondas vs. Circunferencias</h2><p style="font-size:larger; text-align:justify">Una vez descompuesta una onda en una suma de ondas, debemos entender cómo se traducen estas a circunferencias. La amplitud de la onda está directamente relacionada al radio de la circunferencia, mientras la frecuencia se relaciona con la velocidad a la que gira el punto verde.</p></div>
 
-
+    <div  class="img-gif">
+      <img src="images\VidCW.gif" alt="CW"style="width:600px;">
+    </div>
+  
 
 
   

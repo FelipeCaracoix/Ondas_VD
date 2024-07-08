@@ -1,6 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { writable, get } from "svelte/store";
+
   
     let drawingCanvas;
     let fourierCanvas;
@@ -196,7 +197,8 @@
   </style>
   
   <div class="container">
-    <h2>Visualización de Series de Fourier</h2>
+    <h2 >Visualización de Series de Fourier</h2>
+    <div style="font-size:larger;"><p style="font-size: larger;">Las series de Fourier son una herramienta matemática que nos permite descomponer una función periódica en una suma infinita de funciones periódicas más simples. Estas funciones están formadas por combinaciones de senos y cosenos con frecuencias enteras. Imagina que tienes una función que se repite a intervalos regulares, y deseas expresarla como la suma de ondas más simples. Esto es lo que permite las series de Fourier.</p></div>
     <div class="canvas-container">
       <canvas
         bind:this={drawingCanvas}
