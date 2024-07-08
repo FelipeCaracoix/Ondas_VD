@@ -7,7 +7,7 @@
   import Loremipsum from "./texto/Loremipsum.svelte"
   import FormulaDeslizable from "./components/FormulaDeslizable.svelte";
   import { fade } from 'svelte/transition';
-
+ 
   import Amplitud from "./texto/txtAmplitud.svelte"
   import TxtAmplitud from "./texto/txtAmplitud.svelte";
   import txtFrecuencia from "./texto/txtFrecuencia.svelte";
