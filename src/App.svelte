@@ -16,6 +16,39 @@
   import FourierDrawing from "./components/FourierDrawing.svelte"
   import txtSumaOndas from "./texto/txtSumaOndas.svelte"
     import TxtSumaOndas from "./texto/txtSumaOndas.svelte";
+
+  // Tiempo en milisegundos antes de que comience el scroll constante
+ const delayBeforeStart = 0//3000; // 3 segundos
+  // Tiempo en milisegundos durante el cual se ejecutará el scroll constante
+  const scrollDuration = 1200; // 5 segundos
+  // Intervalo en milisegundos entre cada ejecución de scroll
+  const scrollInterval = 10; // 100 milisegundos
+
+  let interval;
+  let timeout;
+
+  function scrollToTop() {
+    window.scrollTo(0, 0); // Scroll directo hacia la parte superior
+  }
+
+  onMount(() => {
+    // Establecer un timeout para iniciar el scroll constante después del delay
+    timeout = setTimeout(() => {
+      // Establecer un intervalo para ejecutar el scroll constantemente
+      interval = setInterval(scrollToTop, scrollInterval);
+
+      // Establecer otro timeout para detener el intervalo después del scrollDuration
+      setTimeout(() => {
+        clearInterval(interval);
+      }, scrollDuration);
+    }, delayBeforeStart);
+
+    // Limpiar intervalos y timeouts si el componente se desmonta
+    return () => {
+      clearTimeout(timeout);
+      clearInterval(interval);
+    };
+  });
   
 
   /* Variables para el scroller1 */
