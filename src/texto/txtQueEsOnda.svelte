@@ -7,3 +7,12 @@
     
     <br>Entender las funciones periódicas es crucial en campos como la física, la ingeniería y la economía, ya que permiten predecir comportamientos y diseñar sistemas que operan con ciclos regulares.</div>
 
+<style>
+    h2{
+        font-family: abhaya_libre;
+    }
+    p{
+    font-size: larger;
+  }
+
+</style>

@@ -14,48 +14,6 @@
 }
 
 
-@font-face {
-  font-family: 'Abhaya Libre';
-  src: url('/fonts/abhaya_libre/AbhayaLibre-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Abhaya Libre';
-  src: url('/fonts/abhaya_libre/AbhayaLibre-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Abhaya Libre';
-  src: url('/fonts/abhaya_libre/AbhayaLibre-ExtraBold.ttf') format('truetype');
-  font-weight: bolder;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Abhaya Libre';
-  src: url('/fonts/abhaya_libre/AbhayaLibre-Medium.ttf') format('truetype');
-  font-weight:normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Abhaya Libre';
-  src: url('/fonts/abhaya_libre/AbhayaLibre-Bold.ttf') format('truetype');
-  font-weight:bold;
-  font-style: normal;
-}
-/* Repite para ExtraBold, Medium y SemiBold */
-
-p {
-  font-weight: normal; /* Usará AbhayaLibre-Regular.ttf */
-}
-h1 {
-  font-weight: bold; /* Usará AbhayaLibre-Bold.ttf */
-}
-h2 {
-  font-weight: bold; /* Usará AbhayaLibre-Bold.ttf */
-}
-
 
 
 body {
@@ -71,9 +29,7 @@ a {
 a:hover {
   color: #535bf2;
 }
-body {
-  font-family: 'Abhaya Libre', sans-serif;
-}
+
 body {
   margin: 0;
   min-width: 320px;

@@ -1,3 +1,5 @@
+<link href="/fonts/abhaya_libre/AbhayaLibre-Regular.ttf" rel="stylesheet">
+
 <script>
     import { onMount } from "svelte";
     import { writable, get } from "svelte/store";
@@ -194,8 +196,20 @@
     h2 {
       text-align: center;
     }
-  </style>
+    p{
+    font-size: larger;
+  }
+
+  h2{
+    font-family: abhaya_libre;
+  }
+
+   .strong {
+    font-family: abhaya_libre;
+    font-size: larger;
+  }
   
+</style>
   <div class="container" style="font-size:larger;">
     <h2 >Visualización de Series de Fourier</h2>
     <div style="text-align:justify"><p style="font-size: larger;">Las series de Fourier son una herramienta matemática que nos permite descomponer una función periódica en una suma infinita de funciones periódicas más simples. Estas funciones están formadas por combinaciones de senos y cosenos con frecuencias enteras. Imagina que tienes una función que se repite a intervalos regulares, y deseas expresarla como la suma de ondas más simples. Esto es lo que permite las series de Fourier.</p>
@@ -217,7 +231,9 @@
       <h2 >¿Cómo se logra este efecto?</h2>
 
       <div style="font-size: larger; text-align:justify">
-        <ul> <li><strong style=“font-size:1.2em;”>Identificación de puntos clave:</strong> <ul> <li>Tomamos un dibujo y localizamos los puntos clave en la curva. Estos puntos representan ubicaciones importantes a lo largo del dibujo.</li> </ul> </li> <li><strong style=“font-size:1.2em;”>Cálculo de coordenadas:</strong> <ul> <li>Para cada punto identificado, calculamos sus coordenadas (x, y). Estas coordenadas nos indican dónde se encuentra cada punto en el plano.</li> </ul> </li> <li><strong style=“font-size:1.2em;”>Creación de circunferencias:</strong> <ul> <li>Creamos una circunferencia centrada en cada uno de los puntos clave.</li> <li>El radio de cada circunferencia se determina por la distancia al siguiente punto. Cuanto más lejos esté el siguiente punto, mayor será el radio de la circunferencia.</li> </ul> </li> <li><strong style=“font-size:1.2em;”>Velocidad angular y frecuencia:</strong> <ul> <li>Asociamos una velocidad angular a cada circunferencia. La velocidad angular está relacionada con la frecuencia de la función que representa la circunferencia. Cuanto más rápido gire la circunferencia, mayor será la frecuencia de la onda correspondiente.</li> </ul> </li> <li><strong style=“font-size:1.2em;”>Suma de circunferencias:</strong> <ul> <li>Sumamos todas las circunferencias creadas. Cada circunferencia contribuye con su función correspondiente.</li> <li>La suma de todas estas funciones nos da la representación en series de Fourier del dibujo original.</li> </ul> </li> <li><strong style=“font-size:1.2em;”>Visualización y precisión:</strong> <ul> <li>Cuantas más circunferencias agreguemos, más precisa será la aproximación al dibujo original.</li> <li>La representación final se acercará cada vez más al dibujo a medida que aumentemos el número de circunferencias.</li> </ul> </li> </ul>    
+        <ul> <li><strong  class="strong" style=“font-size:1.2em;”>Identificación de puntos clave:</strong> <ul> <li>Tomamos un dibujo y localizamos los puntos clave en la curva. Estos puntos representan ubicaciones importantes a lo largo del dibujo. </li> </ul> <br></li> <li><strong class="strong"style=“font-size:1.2em;”>Cálculo de coordenadas:</strong> <ul> <li>Para cada punto identificado, calculamos sus coordenadas (x, y). Estas coordenadas nos indican dónde se encuentra cada punto en el plano.</li> </ul><br> </li> <li><strong class="strong"style=“font-size:1.2em;”>Creación de circunferencias:</strong> <ul> <li>Creamos una circunferencia centrada en cada uno de los puntos clave.</li> <li>El radio de cada circunferencia se determina por la distancia al siguiente punto. Cuanto más lejos esté el siguiente punto, mayor será el radio de la circunferencia.</li> </ul> <br></li> <li><strong class="strong"style=“font-size:1.2em;”>Velocidad angular y frecuencia:</strong> <ul> <li>Asociamos una velocidad angular a cada circunferencia. La velocidad angular está relacionada con la frecuencia de la función que representa la circunferencia. Cuanto más rápido gire la circunferencia, mayor será la frecuencia de la onda correspondiente.</li> </ul> <br></li> <li><strong class="strong"style=“font-size:1.2em;”>Suma de circunferencias:</strong> <ul> <li>Sumamos todas las circunferencias creadas. Cada circunferencia contribuye con su función correspondiente.</li> <li>La suma de todas estas funciones nos da la representación en series de Fourier del dibujo original.</li> </ul> <br></li> <li><strong class="strong"style=“font-size:1.2em;”>Visualización y precisión:</strong> <ul> <li>Cuantas más circunferencias agreguemos, más precisa será la aproximación al dibujo original.</li> <li>La representación final se acercará cada vez más al dibujo a medida que aumentemos el número de circunferencias.</li> </ul> </li> </ul> <br>   
       </div>
 
     </div>
+
+    

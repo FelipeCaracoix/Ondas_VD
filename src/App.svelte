@@ -1,3 +1,5 @@
+<link href="/fonts/abhaya_libre/AbhayaLibre-Regular.ttf" rel="stylesheet">
+
 <script>
   import Scroller from "@sveltejs/svelte-scroller"
   import {onMount} from "svelte"
@@ -70,11 +72,11 @@
   <div style="width:max-content; height:max-content; background-color:#f9f9f9;position:absolute"></div>
   <div class="header">
     <img src="/images/title.svg" width="800" alt="anillos" />
-    <h1 class="headline">
-      <b>Ondas, Fourier y otras cosas</b>
+    <h1 class="headline" style="font-family: abhaya_libre;">
+      Aprendé sobre series matemáticas
       
     </h1>
-    <p class="bajada">Entendiendo como funcionan las ondas</p>
+   
   </div>
 
   {#if progress < 1}
@@ -86,6 +88,8 @@
   />
   {/if}
   
+
+  <div class="scroller-cont">
   <!-- Segundo scroller -->
   <Scroller
     top={top}
@@ -122,7 +126,7 @@
       </div>
 
     <div slot="foreground" class="foreground_container">
-      <section class="step_foreground" style="height:700px">
+      <section class="step_foreground" style="height:850px">
         <TxtQueEsOnda/>
         </section>
       <section class="step_foreground" style="height:700px">
@@ -135,11 +139,11 @@
     
     </div>
   </Scroller>
-
+  </div>
  
 
-  <br>
-  
+
+  <div class= "scroller-cont">
       <div  class="image_container" style="margin-top: 0px;">
       <img  src="/public/images/gifSumaOnda.gif"  alt="miGif" style="border:1px solid black; width:400px; height: 400px">
       </div>
@@ -148,24 +152,23 @@
        <TxtSumaOndas/>
         </div>
       </div>
-  
+    </div>
     <br>
 
-    <div style="display: flex;flex-direction:row">
-      <div class="image-container" style="clip-path: inset(0 0 0 75px)">
+    <!-- <div style="display: flex;flex-direction:row"> -->
+      <!-- <div class="image-container" style="clip-path: inset(0 0 0 75px)"> -->
         <!-- <iframe title="ondaGeo" src="https://www.geogebra.org/calculator/wpgvpuns" width="400" height="400"  style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe> -->
         <!-- <iframe title="ondaGeo" src="https://www.geogebra.org/calculator/wpgvpuns" width="400" height="400"  style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe> -->
         <!-- <iframe title="ondaGeo" src="https://www.geogebra.org/calculator/wpgvpuns" width="400" height="400"  style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe> -->
-        <iframe title="onda"src="https://www.geogebra.org/calculator/wpgvpuns?embed" frameborder="0" width="475px" height="400px" draggable="false"></iframe>
-      </div>
-      <div class="foreground_container" style="position: absolute;">
-      <div class="step_foreground" style="font-size:larger;">
-      <p style="font-size: larger; text-align:justify">Como vimos posteriormente, las ondas al poder representarse tanto como ondas como circulos, podemos jugar con las amplitudes y frecuencias de estas para poder generar distintos movimientos especificos.</p>
-      </div>
-      </div>
-   
-    </div>
-
+        <!-- <iframe title="onda"src="https://www.geogebra.org/calculator/wpgvpuns?embed" frameborder="0" width="475px" height="400px" draggable="false"></iframe> -->
+      <!-- </div> -->
+      <!-- <div class="foreground_container" style="position: absolute;"> -->
+      <!-- <div class="step_foreground" style="font-size:larger;"> -->
+      <!-- <p style="font-size: larger; text-align:justify">Como vimos posteriormente, las ondas al poder representarse tanto como ondas como circulos, podemos jugar con las amplitudes y frecuencias de estas para poder generar distintos movimientos especificos.</p> -->
+      <!-- </div> -->
+      <!-- </div> -->
+    <!-- </div> -->
+    
 
 <div style="margin-left: 11%;margin-right:11%">
 
@@ -314,6 +317,20 @@
     /* move left */
     transform: translateX(-50px);
   }
+ 
+  h1{
+    font-family: abhaya_libre;
+  }
+  h2{
+    font-family: abhaya_libre;
+  }
+  h3{
+    font-family: abhaya_libre;
+  }
+  p{
+    font-size: larger;
+  }
+
 
 
 

@@ -111,4 +111,17 @@ $: {
     text-align: center;
     margin-top: 5px;
   }
+  p{
+    font-family: abhaya_libre;
+  }
+  h1{
+    font-family: abhaya_libre;
+  }
+  h2{
+    font-family: abhaya_libre;
+  }
+  h3{
+    font-family: abhaya_libre;
+  }
+  
 </style>

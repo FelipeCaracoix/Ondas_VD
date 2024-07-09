@@ -124,4 +124,18 @@
       display:block;
     }
     
+
+    p{
+    font-family: abhaya_libre;
+  }
+  h1{
+    font-family: abhaya_libre;
+  }
+  h2{
+    font-family: abhaya_libre;
+  }
+  h3{
+    font-family: abhaya_libre;
+  }
+  
   </style>

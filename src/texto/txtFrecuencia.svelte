@@ -13,3 +13,20 @@
 
 <p style="font-size: larger;text-align:justify">Un valor más alto en el rango significa más ciclos por segundo y una onda más “apretada”, mientras que un valor más bajo indica menos ciclos y una onda más “extendida”.</div>
 
+    <style>
+
+        
+          h1{
+            font-family: abhaya_libre;
+          }
+          h2{
+            font-family: abhaya_libre;
+          }
+          h3{
+            font-family: abhaya_libre;
+          }p{
+    font-size: larger;
+  }
+
+          
+        </style>

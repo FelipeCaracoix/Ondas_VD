@@ -13,3 +13,12 @@ export let L = 1;
 
 </div>
 
+
+<style>
+    h2{
+        font-family: abhaya_libre;
+    }p{
+    font-size: larger;
+  }
+
+</style>
