@@ -69,7 +69,7 @@
 <main >
   <div style="width:max-content; height:max-content; background-color:#f9f9f9;position:absolute"></div>
   <div class="header">
-    <img src="/images/titulo.svg" width="800" alt="anillos" />
+    <img src="/images/title.svg" width="800" alt="anillos" />
     <h1 class="headline">
       <b>Ondas, Fourier y otras cosas</b>
       
