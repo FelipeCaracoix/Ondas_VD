@@ -160,11 +160,15 @@
       </div>
       <div class="foreground_container" style="position: absolute;">
       <div class="step_foreground" style="font-size:larger;">
-      <p style="font-size: larger;">Como vimos posteriormente, las ondas al poder representarse tanto como ondas como circulos, podemos jugar con las amplitudes y frecuencias de estas para poder generar distintos movimientos especificos.</p>
+      <p style="font-size: larger; text-align:justify">Como vimos posteriormente, las ondas al poder representarse tanto como ondas como circulos, podemos jugar con las amplitudes y frecuencias de estas para poder generar distintos movimientos especificos.</p>
       </div>
       </div>
    
     </div>
+
+
+<div style="margin-left: 11%;margin-right:11%">
+
 
     <div style="font-size:larger; display:flex;flex-direction:column;text-align:center"><h2>Ondas vs. Circunferencias</h2><p style="font-size:larger; text-align:justify">Una vez descompuesta una onda en una suma de ondas, debemos entender cómo se traducen estas a circunferencias. La amplitud de la onda está directamente relacionada al radio de la circunferencia, mientras la frecuencia se relaciona con la velocidad a la que gira el punto verde.</p></div>
 
@@ -172,10 +176,11 @@
       <img src="images\VidCW.gif" alt="CW"style="width:600px;">
     </div>
   
-
-
-  
     <FourierDrawing/>
+  </div>
+
+    <hr>
+    <p style="text-align: center;">Caracoix, Felipe; Castore, Juan Ignacio; Salem, Guido.</p>
 </main>
 
 

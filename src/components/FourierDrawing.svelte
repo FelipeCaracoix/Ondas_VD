@@ -179,9 +179,9 @@
     }
     .explanation-container {
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       width: 100%;
-      max-width: 900px;
+     
     }
     .explanation {
       flex: 1;
@@ -196,9 +196,10 @@
     }
   </style>
   
-  <div class="container">
+  <div class="container" style="font-size:larger;">
     <h2 >Visualización de Series de Fourier</h2>
-    <div style="font-size:larger;"><p style="font-size: larger;">Las series de Fourier son una herramienta matemática que nos permite descomponer una función periódica en una suma infinita de funciones periódicas más simples. Estas funciones están formadas por combinaciones de senos y cosenos con frecuencias enteras. Imagina que tienes una función que se repite a intervalos regulares, y deseas expresarla como la suma de ondas más simples. Esto es lo que permite las series de Fourier.</p></div>
+    <div style="text-align:justify"><p style="font-size: larger;">Las series de Fourier son una herramienta matemática que nos permite descomponer una función periódica en una suma infinita de funciones periódicas más simples. Estas funciones están formadas por combinaciones de senos y cosenos con frecuencias enteras. Imagina que tienes una función que se repite a intervalos regulares, y deseas expresarla como la suma de ondas más simples. Esto es lo que permite las series de Fourier.</p>
+    <p style="font-size: larger;">Dibujá en el cuadrado izquiero y observá como se implementan las series de Fourier en tiempo real:</p></div>
     <div class="canvas-container">
       <canvas
         bind:this={drawingCanvas}
@@ -210,41 +211,13 @@
       <canvas bind:this={fourierCanvas} width="400" height="400"></canvas>
     </div>
     <button on:click={clearCanvas}>Limpiar</button>
-    <div class="explanation-container">
-      <div class="explanation">
-        <h2>Cómo Funciona Esto</h2>
-        <p>
-          Esta demostración visualiza cómo un dibujo se puede transformar en una serie de componentes de Fourier.
-          El proceso comienza cuando dibujas una forma en el lienzo de la izquierda. La forma que dibujas es
-          esencialmente una colección de puntos que definen el contorno de tu dibujo.
-        </p>
-        <p>
-          Esta demostración visualiza cómo un dibujo se puede transformar en una serie de componentes de Fourier. 
-          El proceso comienza cuando dibujas una forma en el lienzo de la izquierda. La forma que dibujas es esencialmente una colección de puntos que definen el contorno de tu dibujo.
-          Una vez que completas tu dibujo y sueltas el botón del ratón, el programa captura la serie de puntos y aplica la Transformada Discreta de Fourier (DFT) a estos puntos. 
-          La DFT convierte la información espacial (tu dibujo) en información de frecuencia, descomponiéndolo en una serie de componentes sinusoidales (ondas). 
-        </p>
-      </div>
-      <div class="explanation">
-        <h2>¿Por Qué Funciona?</h2>
-        <p>
-          Cada uno de estos componentes sinusoidales tiene una frecuencia, amplitud y fase específicas. Sumando estos componentes,
-          podemos reconstruir el dibujo original como una combinación de estas formas de onda simples. Esto es lo que se visualiza
-          en el lienzo de la derecha. Los círculos representan las amplitudes de estos componentes sinusoidales, y su movimiento
-          traza la forma de tu dibujo original.
-        </p>
-        <p>
-          La Transformada de Fourier es una herramienta poderosa en el procesamiento de señales y ayuda a analizar el contenido
-          de frecuencia de las señales. Aquí, nos permite ver cómo las formas complejas se pueden representar como sumas de
-          movimientos circulares más simples. Este concepto es fundamental en muchos campos, incluyendo el procesamiento de audio,
-          la compresión de imágenes e incluso la física cuántica.
-        </p>
-       
-      </div>
-    </div>
-    <div class="aclaracion">
-      <p>
-        "En este ejemplo, usamos hasta 100.000 componentes (círculos) para representar tu dibujo. Aunque pueda parecer demasiado, esta cantidad es crucial para lograr una similitud notable con la imagen original. La razón por la cual tantos círculos no afectan significativamente el rendimiento del programa radica en la simplicidad matemática subyacente. Cada círculo se puede describir mediante ecuaciones simples y operaciones geométricas, lo cual es computacionalmente eficiente. Esto significa que, aunque estamos sumando un gran número de componentes, cada uno de ellos requiere un cálculo sencillo, permitiendo que el programa funcione sin problemas y sin consumir excesivos recursos de la computadora."
-    </p>
-    </div>
   </div>
+  
+    <div class="explanation-container" style="font-size:larger;justify-content: center;display:flex;flex-direction:column">
+      <h2 >¿Cómo se logra este efecto?</h2>
+
+      <div style="font-size: larger; text-align:justify">
+        <ul> <li><strong style=“font-size:1.2em;”>Identificación de puntos clave:</strong> <ul> <li>Tomamos un dibujo y localizamos los puntos clave en la curva. Estos puntos representan ubicaciones importantes a lo largo del dibujo.</li> </ul> </li> <li><strong style=“font-size:1.2em;”>Cálculo de coordenadas:</strong> <ul> <li>Para cada punto identificado, calculamos sus coordenadas (x, y). Estas coordenadas nos indican dónde se encuentra cada punto en el plano.</li> </ul> </li> <li><strong style=“font-size:1.2em;”>Creación de circunferencias:</strong> <ul> <li>Creamos una circunferencia centrada en cada uno de los puntos clave.</li> <li>El radio de cada circunferencia se determina por la distancia al siguiente punto. Cuanto más lejos esté el siguiente punto, mayor será el radio de la circunferencia.</li> </ul> </li> <li><strong style=“font-size:1.2em;”>Velocidad angular y frecuencia:</strong> <ul> <li>Asociamos una velocidad angular a cada circunferencia. La velocidad angular está relacionada con la frecuencia de la función que representa la circunferencia. Cuanto más rápido gire la circunferencia, mayor será la frecuencia de la onda correspondiente.</li> </ul> </li> <li><strong style=“font-size:1.2em;”>Suma de circunferencias:</strong> <ul> <li>Sumamos todas las circunferencias creadas. Cada circunferencia contribuye con su función correspondiente.</li> <li>La suma de todas estas funciones nos da la representación en series de Fourier del dibujo original.</li> </ul> </li> <li><strong style=“font-size:1.2em;”>Visualización y precisión:</strong> <ul> <li>Cuantas más circunferencias agreguemos, más precisa será la aproximación al dibujo original.</li> <li>La representación final se acercará cada vez más al dibujo a medida que aumentemos el número de circunferencias.</li> </ul> </li> </ul>    
+      </div>
+
+    </div>
