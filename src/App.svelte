@@ -163,7 +163,7 @@
     <div class="littleDrawDescript">
       <h2 style="text-align: center;">¿Qué pasa si combinamos los 2 conceptos anteriores?</h2>
       <p style="text-align: justify;">
-        La imagen que tenemos ante nosotros muestra la representación gráfica de la suma de tres ondas: Observamos cómo cada círculo, que representa a su respectiva onda, se encuentra centrado en la suma de las amplitudes de las ondas anteriores. Esto se debe a que la suma de ondas es en realidad la adición de ondas individuales, y podemos considerar cada onda individual como una circunferencia. Al explorar estos conceptos, podemos generar fenómenos visualmente atractivos.
+        La imagen que tenemos ante nosotros muestra la representación gráfica de la suma de tres ondas: Observamos cómo cada círculo, que representa a su respectiva onda, se encuentra centrado en la suma de las amplitudes de las ondas anteriores. Esto permite descomponer el dibujo en ondas y hacer su representación como una cadena de circunferencias. 
       </p>
   </div>
 
