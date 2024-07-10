@@ -20,19 +20,7 @@
     import TxtSumaOndas from "./texto/txtSumaOndas.svelte";
   import LitleDraw from "./components/LitleDraw.svelte";
 
-  // Tiempo en milisegundos antes de que comience el scroll constante
- const delayBeforeStart = 0//3000; // 3 segundos
-  // Tiempo en milisegundos durante el cual se ejecutará el scroll constante
-  const scrollDuration = 1200; // 5 segundos
-  // Intervalo en milisegundos entre cada ejecución de scroll
-  const scrollInterval = 10; // 100 milisegundos
-
-  let interval;
-  let timeout;
-
-  function scrollToTop() {
-    window.scrollTo(0, 0); // Scroll directo hacia la parte superior
-  }
+ 
 
   onMount(() => {
     // Establecer un timeout para iniciar el scroll constante después del delay
@@ -139,7 +127,7 @@
 
   <div class= "scroller-cont">
       <div  class="image_container" style="margin-top: 0px;">
-      <img  src="/public/images/gifSumaOnda.gif"  alt="miGif" style="border:1px solid black; width:400px; height: 400px">
+      <img  src="/images/gifSumaOnda.gif"  alt="miGif" style="border:1px solid black; width:400px; height: 400px">
       </div>
       <div  class="foreground_container">
         <div class="step_foreground" style=" margin-top: 90px"> 
@@ -170,20 +158,15 @@
     <div style="font-size:larger; display:flex;flex-direction:column;text-align:center"><h2>Ondas vs. Circunferencias</h2><p style="font-size:larger; text-align:justify">Una vez descompuesta una onda en una suma de ondas, debemos entender cómo se traducen estas a circunferencias. La amplitud de la onda está directamente relacionada al radio de la circunferencia, mientras la frecuencia se relaciona con la velocidad a la que gira el punto verde.</p></div>
 
     <div  class="img-gif">
-      <img src="images\VidCW.gif" alt="CW"style="width:600px;">
+      <img src="/images/VidCW.gif" alt="CW"style="width:600px;">
     </div>
     <div class="littleDrawDescript">
       <h2 style="text-align: center;">¿Qué pasa si combinamos los 2 conceptos anteriores?</h2>
-      <p>
-          La siguiente es la representación gráfica de una suma de 3 ondas:
-          <br>
-          Podemos ver cómo cada círculo generador de una respectiva onda está centrado en donde lo dejó la onda anterior.
-           Esto se debe a que la suma de ondas es la suma de las ondas individuales, 
-           y cada onda individual la podemos ver como una circunferencia.
-           Entonces jugando un poco con estas ideas surgen cosas visualmente interesantes.
+      <p style="text-align: justify;">
+        La imagen que tenemos ante nosotros muestra la representación gráfica de la suma de tres ondas: Observamos cómo cada círculo, que representa a su respectiva onda, se encuentra centrado en la suma de las amplitudes de las ondas anteriores. Esto se debe a que la suma de ondas es en realidad la adición de ondas individuales, y podemos considerar cada onda individual como una circunferencia. Al explorar estos conceptos, podemos generar fenómenos visualmente atractivos.
       </p>
   </div>
-  
+
     <div class="littleDraw">
       <LitleDraw/>
     </div>

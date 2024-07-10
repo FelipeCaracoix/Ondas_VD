@@ -124,7 +124,7 @@
         align-items: center;
     }
     canvas {
-        background-color: #f9f9f9;
+ 
         border: 1px solid black;
     }
 </style>

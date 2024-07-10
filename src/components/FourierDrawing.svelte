@@ -188,7 +188,7 @@
   button {
     margin: 10px;
     padding: 10px 20px;
-    background-color: white;
+    background-color: black;
     border: 2px solid black;
     transition: background-color 0.3s, transform 0.3s;
   }
