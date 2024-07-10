@@ -5,7 +5,7 @@
   import {onMount} from "svelte"
   import * as d3 from "d3"
 
-  import DebugScroller from "./components/DebugScroller.svelte"
+
   import Loremipsum from "./texto/Loremipsum.svelte"
   import FormulaDeslizable from "./components/FormulaDeslizable.svelte";
   import { fade } from 'svelte/transition';
@@ -18,6 +18,7 @@
   import FourierDrawing from "./components/FourierDrawing.svelte"
   import txtSumaOndas from "./texto/txtSumaOndas.svelte"
     import TxtSumaOndas from "./texto/txtSumaOndas.svelte";
+  import LitleDraw from "./components/LitleDraw.svelte";
 
   // Tiempo en milisegundos antes de que comience el scroll constante
  const delayBeforeStart = 0//3000; // 3 segundos
@@ -79,14 +80,7 @@
    
   </div>
 
-  {#if progress < 1}
-  <DebugScroller
-    index={index}
-    count={count}
-    offset={offset}
-    progress={progress}
-  />
-  {/if}
+
   
 
   <div class="scroller-cont">
@@ -148,7 +142,7 @@
       <img  src="/public/images/gifSumaOnda.gif"  alt="miGif" style="border:1px solid black; width:400px; height: 400px">
       </div>
       <div  class="foreground_container">
-        <div class="step_foreground"> 
+        <div class="step_foreground" style=" margin-top: 90px"> 
        <TxtSumaOndas/>
         </div>
       </div>
@@ -178,12 +172,28 @@
     <div  class="img-gif">
       <img src="images\VidCW.gif" alt="CW"style="width:600px;">
     </div>
+    <div class="littleDrawDescript">
+      <h2 style="text-align: center;">¿Qué pasa si combinamos los 2 conceptos anteriores?</h2>
+      <p>
+          La siguiente es la representación gráfica de una suma de 3 ondas:
+          <br>
+          Podemos ver cómo cada círculo generador de una respectiva onda está centrado en donde lo dejó la onda anterior.
+           Esto se debe a que la suma de ondas es la suma de las ondas individuales, 
+           y cada onda individual la podemos ver como una circunferencia.
+           Entonces jugando un poco con estas ideas surgen cosas visualmente interesantes.
+      </p>
+  </div>
   
+    <div class="littleDraw">
+      <LitleDraw/>
+    </div>
+    
     <FourierDrawing/>
+    
   </div>
 
     <hr>
-    <p style="text-align: center;">Caracoix, Felipe; Castore, Juan Ignacio; Salem, Guido.</p>
+    <p style="text-align: center;">Caracoix Felipe; Castore Juan Ignacio; Salem Guido.</p>
 </main>
 
 
@@ -257,6 +267,23 @@
     padding-left: 10%;
     padding-top: 2%;
     
+  }
+
+  .littleDraw{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  .littleDrawDescript{
+    
+    font-size: 20px;
+    font-weight: normal;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    margin-top: 120px;
   }
 
   .onda {
