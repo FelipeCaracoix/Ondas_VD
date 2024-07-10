@@ -240,7 +240,7 @@
     ></canvas>
     <canvas bind:this={fourierCanvas} width="400" height="400"></canvas>
   </div>
-  <button on:click={clearCanvas}>Limpiar</button>
+  <button on:click={clearCanvas}><p style="color: white;padding:0px;margin:0px">Limpiar</p></button>
 </div>
 
 <div class="explanation-container" style="font-size:larger;justify-content: center;display:flex;flex-direction:column">
